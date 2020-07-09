@@ -1,3 +1,6 @@
+# MacOS
+.DS_Store
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -119,6 +122,14 @@ venv.bak/
 
 # mkdocs documentation
 /site
+
+# Idea files
+.idea
+
+# Eclipse files
+.project
+.pydevproject
+.settings/
 
 # mypy
 .mypy_cache/
