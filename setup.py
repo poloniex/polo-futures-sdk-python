@@ -18,7 +18,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='polo-futures',
+    name='polo-futures-sdk',
     version='v0.1',
     packages=find_packages(),
     license='MIT',
