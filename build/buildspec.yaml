@@ -1,0 +1,21 @@
+---
+version: 0.2
+
+env:
+  parameter-store:
+    TWINE_USERNAME: /prod/futures/polo-futures-sdk-python/pypi_username
+    TWINE_PASSWORD: /prod/futures/polo-futures-sdk-python/pypi_password
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.8
+    commands:
+      - pip install --upgrade pip
+      - pip install --upgrade setuptools wheel
+      - pip install twine
+
+  build:
+    commands:
+      - python setup.py sdist bdist_wheel
+      - twine upload dist/*
