@@ -17,6 +17,5 @@ phases:
   build:
     commands:
       - python setup.py sdist bdist_wheel
-      - echo "[testpypi]\nusername = __token__\npassword = $PYPI_TOKEN" > ~/.pypirc
-      - twine upload --repository testpypi dist/*
-      # - twine upload dist/*
+      - echo "[pypi]\nusername = __token__\npassword = $PYPI_TOKEN" > ~/.pypirc
+      - twine upload dist/*
