@@ -28,7 +28,7 @@ setup(
     description='Poloniex Futures Exchange Python 3 Wrapper',
     install_requires=[
         'requests~=2.23',
-        'websockets~=8.1'
+        'websockets>=8.1,<10.0'
     ],
     classifiers=[
         'Programming Language :: Python :: 3',
