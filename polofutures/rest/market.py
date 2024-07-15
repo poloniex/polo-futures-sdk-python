@@ -194,6 +194,21 @@ class MarketClient:
 
         return self._request('GET', '/api/v1/ticker', params)
 
+    def get_kline(self, symbol, **kwargs):
+        """
+        Returns OHLC for a symbol at given timeframe (interval).
+
+        Param	    Type	Description
+        granularity int     seconds of granularity
+        """
+        
+        params = {
+            'symbol': symbol,  
+        }
+        params.update(kwargs)
+
+        return self._request('GET', '/api/v1/kline/query', params)
+    
     def get_contracts_list(self):
         """
         Submit request to get the info of all open contracts."""
